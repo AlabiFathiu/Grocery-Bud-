@@ -1,0 +1,208 @@
+/* CSS Font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+/* CSS RESET */
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 2.0;
+    font-size: 1rem;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Utility Styles */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: fixed;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 3px 3px 5px 3px #ccc;
+    width: 80%;
+}
+
+.grocery-form {
+    padding: 10px;
+}
+
+.grocery-form h2 {
+    letter-spacing: 2px;
+}
+
+.form-control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-control input {
+    width: 70%;
+    padding: 5px 10px;
+}
+
+.form-control input:focus {
+    outline: none;
+}
+
+.form-control button {
+    width: 20%;
+    padding: 6px 10px;
+    background-color: coral;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Grocery Container */
+.grocery-container {
+    margin-top: 20px;
+    visibility: hidden;
+    transform: all 0.4s linear;
+}
+
+.show-container {
+    visibility: visible;
+}
+
+/* grocery item */
+
+.grocery-list {
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: all 0.3s linear;
+}
+
+.grocery-list:hover {
+    background-color: azure;
+    transform: scale(1.1);
+    transition: transform 0.4s ease-in-out;
+    border-radius: 10px;
+}
+
+.grocery-list p {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 0;
+    transition: all 0.5s;
+}
+
+/* btn-container */
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-btn {
+    border: none;
+    color: green;
+    font-size: 18px;
+    background: none;
+}
+
+.delete-btn {
+    border: none;
+    color: red;
+    font-size: 18px;
+    background: none;
+}
+
+/* Clear Items */
+.clear-btn {
+    margin-top: 10%;
+    width: 30%;
+    background-color: transparent;
+    padding: 5px 0;
+    letter-spacing: 3px;
+    border: none;
+}
+
+.clear-btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease-in-out;
+}
+/* Alerts */
+.alert-danger {
+    color: red;
+    background-color: #ccc;
+}
+.alert-success {
+    color: green;
+    background-color: #ccc;
+}
+
+.alert {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s linear;
+    align-items: center;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-radius: 10px;
+}
+/* Media Queries */
+@media screen and (max-width: 800px) {
+    .container {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .form-control input {
+        width: 80%;
+    }
+
+    .form-control .submit-btn {
+        width: 20%;
+        padding: 5px;
+    }
+
+    .clear-btn {
+        width: 40%;
+        background-color: transparent;
+        font-weight: bold;
+        color: red;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 95%;
+    }
+
+    .grocery-list {
+        width: 100%;
+    }
+
+    .form-control .submit-btn {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8dd41fcb54.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Grocery Bud</title>
+</head>
+<body>
+   <main class="container">
+        <!-- Grocery Form -->
+        <form class="grocery-form" id="grocery">
+            <!-- alert -->
+            <p class="alert" id="alert"></p>
+            <h2>Grocery Bud</h2>
+            <!-- Form Inputs -->
+            <div class="form-control">
+                <input type="text" id="input" placeholder="e.g Eggs">
+                <button class="submit-btn" id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+
+        <!-- Grocery Container -->
+            <div class="grocery-container">
+                <div class="grocery-item">
+                    <article class="grocery-list"></article>
+                </div>
+                <!-- Clear Btn -->
+                <button class="clear-btn" id="clear-items" type="button"> Clear Items</button>
+            </div>
+        </main>
+        <!-- Javascript -->
+        <script src="main.js"></script>
+    </body>
+</html>
